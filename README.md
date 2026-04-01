@@ -1,4 +1,4 @@
-# ☕ The Brew Haven — Café Website
+# ☕ The Haven — Café Website
 
 This is a full-stack modern café website built with **Angular 19** and **FastAPI**.
 
