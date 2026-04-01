@@ -1,0 +1,23 @@
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="images/hero-banner.png" alt="Warm cozy café interior with ambient lighting" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Est. 2018 · Artisan Coffee</div>
+    <h2>
+      The Haven
+      <span>Where Every Cup Tells a Story</span>
+    </h2>
+    <p>Escape the rush. Savor handcrafted coffee, freshly baked pastries, and the warmth of a place that feels like home.</p>
+    <div class="hero-buttons">
+      <a (click)="scrollTo('menu')" class="btn btn-primary" style="cursor:pointer;">
+        <span>☕</span> Explore Menu
+      </a>
+      <a (click)="scrollTo('about')" class="btn btn-secondary" style="cursor:pointer;">
+        Our Story <span>→</span>
+      </a>
+    </div>
+  </div>
+  <a (click)="scrollTo('about')" class="hero-scroll" style="cursor:pointer;" aria-label="Scroll down">▼</a>
+</section>

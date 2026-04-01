@@ -1,0 +1,12 @@
+.loc-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #C9A96E, #8D6E63);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-style: normal;
+  flex-shrink: 0;
+}

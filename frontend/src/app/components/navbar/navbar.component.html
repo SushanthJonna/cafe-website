@@ -1,0 +1,21 @@
+<nav class="navbar" [class.scrolled]="scrolled">
+  <div class="container">
+    <a (click)="scrollTo('home')" class="nav-logo" style="cursor:pointer;">
+      <div class="logo-icon">☕</div>
+      <h1>The Haven</h1>
+    </a>
+    <ul class="nav-links" [class.open]="mobileOpen">
+      <li><a (click)="scrollTo('home')" style="cursor:pointer;">Home</a></li>
+      <li><a (click)="scrollTo('about')" style="cursor:pointer;">About</a></li>
+      <li><a (click)="scrollTo('menu')" style="cursor:pointer;">Menu</a></li>
+      <li><a (click)="scrollTo('gallery')" style="cursor:pointer;">Gallery</a></li>
+      <li><a (click)="scrollTo('hours')" style="cursor:pointer;">Hours</a></li>
+      <li><a (click)="scrollTo('reviews')" style="cursor:pointer;">Reviews</a></li>
+      <li><a (click)="scrollTo('contact')" style="cursor:pointer;">Contact</a></li>
+    </ul>
+    <button class="hamburger" [class.active]="mobileOpen" (click)="toggleMobile()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" [class.active]="mobileOpen" (click)="closeMobile()"></div>

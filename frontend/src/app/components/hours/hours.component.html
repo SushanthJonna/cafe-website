@@ -1,0 +1,52 @@
+<section class="hours section" id="hours">
+  <div class="container">
+    <div class="section-header">
+      <h2>Opening Hours</h2>
+      <div class="decorative-divider"><span></span><i>🕐</i><span></span></div>
+      <p>We're here to fuel your mornings and sweeten your evenings.</p>
+    </div>
+
+    <div class="hours-content">
+      <div class="hours-card">
+        <h3>🕐 Weekly Schedule</h3>
+        <div class="hours-list">
+          <div *ngFor="let h of hours" class="hours-row" [class.today]="h.isToday">
+            <span class="day">{{ h.day }}</span>
+            <span class="time">{{ h.time }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hours-info">
+        <div class="hours-info-card">
+          <i>🌅</i>
+          <div>
+            <h4>Early Bird Special</h4>
+            <p>Visit us before 9 AM and enjoy 15% off on all breakfast items. Start your day right!</p>
+          </div>
+        </div>
+        <div class="hours-info-card">
+          <i>💝</i>
+          <div>
+            <h4>Weekend Brunch</h4>
+            <p>Our weekend brunch menu features special items like Eggs Benedict, Belgian Waffles, and bottomless mimosas.</p>
+          </div>
+        </div>
+        <div class="hours-info-card">
+          <i>🎵</i>
+          <div>
+            <h4>Live Music Fridays</h4>
+            <p>Enjoy live acoustic performances every Friday evening from 7 PM – 9 PM. The perfect weekend start!</p>
+          </div>
+        </div>
+        <div class="hours-info-card">
+          <i>🎁</i>
+          <div>
+            <h4>Private Events</h4>
+            <p>We host birthday parties, book clubs, and corporate meetups. Contact us to reserve our cozy loft space.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

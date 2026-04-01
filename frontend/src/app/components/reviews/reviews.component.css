@@ -1,0 +1,82 @@
+.write-review-section {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.write-review-btn {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.review-form-wrapper {
+  max-width: 550px;
+  margin: 2rem auto 0;
+}
+
+.review-form-card {
+  background: #FAF7F5;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.12);
+  border: 1px solid rgba(215, 204, 200, 0.3);
+}
+
+.review-form-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2C1810;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.star-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.star-pick {
+  font-size: 1.8rem;
+  color: #D7CCC8;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.star-pick:hover,
+.star-pick.active {
+  color: #C9A96E;
+  transform: scale(1.15);
+}
+
+.review-success {
+  text-align: center;
+  padding: 2rem;
+  background: #FAF7F5;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.12);
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.review-success h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2C1810;
+  margin-bottom: 0.5rem;
+}
+
+.review-success p {
+  color: #8D6E63;
+}
+
+.star.filled {
+  color: #C9A96E;
+  font-size: 0.9rem;
+}
+
+.star.empty {
+  color: #D7CCC8;
+  font-size: 0.9rem;
+}

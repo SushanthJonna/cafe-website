@@ -1,0 +1,50 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>☕ The Haven</h3>
+        <p>A cozy corner of the world where great coffee meets great company. We believe in good beans, great people, and the magic that happens when they come together.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">📸</a>
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">📘</a>
+          <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a (click)="scrollTo('home')" style="cursor:pointer;">Home</a></li>
+          <li><a (click)="scrollTo('about')" style="cursor:pointer;">Our Story</a></li>
+          <li><a (click)="scrollTo('menu')" style="cursor:pointer;">Menu</a></li>
+          <li><a (click)="scrollTo('gallery')" style="cursor:pointer;">Gallery</a></li>
+          <li><a (click)="scrollTo('contact')" style="cursor:pointer;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Menu Picks</h4>
+        <ul class="footer-links">
+          <li><a (click)="scrollTo('menu')" style="cursor:pointer;">Espresso</a></li>
+          <li><a (click)="scrollTo('menu')" style="cursor:pointer;">Caramel Latte</a></li>
+          <li><a (click)="scrollTo('menu')" style="cursor:pointer;">Avocado Toast</a></li>
+          <li><a (click)="scrollTo('menu')" style="cursor:pointer;">Tiramisu</a></li>
+          <li><a (click)="scrollTo('menu')" style="cursor:pointer;">Matcha Latte</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+          <li><a href="mailto:hello&#64;thebrewhaven.com">📧 hello&#64;thebrewhaven.com</a></li>
+          <li><a (click)="scrollTo('location')" style="cursor:pointer;">📍 42 Lavender Lane, Bengaluru</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} The Haven. All rights reserved. Brewed with ❤️</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

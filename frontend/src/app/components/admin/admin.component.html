@@ -1,0 +1,81 @@
+<div class="admin-page">
+  <!-- Login Screen -->
+  <div class="admin-login" *ngIf="!authenticated">
+    <div class="admin-login-card">
+      <div class="login-icon">🔒</div>
+      <h2>Admin Access</h2>
+      <p>Enter the admin key to manage messages and reviews.</p>
+      <div class="form-group">
+        <input type="password" [(ngModel)]="adminKey" placeholder="Enter admin key..." (keyup.enter)="authenticate()" />
+      </div>
+      <button class="form-submit" (click)="authenticate()" [disabled]="loading">
+        {{ loading ? 'Verifying...' : '🔓 Unlock' }}
+      </button>
+      <a routerLink="/" class="back-link">← Back to Website</a>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard -->
+  <div class="admin-dashboard" *ngIf="authenticated">
+    <div class="admin-header">
+      <div class="admin-header-left">
+        <h1>☕ Brew Haven Admin</h1>
+        <a routerLink="/" class="back-link">← Back to Website</a>
+      </div>
+      <button class="btn-logout" (click)="logout()">🚪 Logout</button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="admin-tabs">
+      <button class="admin-tab" [class.active]="activeTab === 'messages'" (click)="switchTab('messages')">
+        📨 Messages ({{ messages.length }})
+      </button>
+      <button class="admin-tab" [class.active]="activeTab === 'reviews'" (click)="switchTab('reviews')">
+        ⭐ Reviews ({{ reviews.length }})
+      </button>
+    </div>
+
+    <!-- Messages Tab -->
+    <div class="admin-content" *ngIf="activeTab === 'messages'">
+      <div class="empty-state" *ngIf="messages.length === 0">
+        <div class="empty-icon">📭</div>
+        <h3>No messages yet</h3>
+        <p>Messages from your contact form will appear here.</p>
+      </div>
+
+      <div class="admin-card" *ngFor="let msg of messages">
+        <div class="admin-card-header">
+          <div>
+            <h4>{{ msg.name }}</h4>
+            <span class="admin-meta">{{ msg.email }} · {{ formatDate(msg.created_at) }}</span>
+          </div>
+          <button class="btn-delete" (click)="deleteMessage(msg.id!)">🗑️ Delete</button>
+        </div>
+        <p class="admin-card-body">{{ msg.message }}</p>
+        <div class="admin-card-footer" *ngIf="msg.phone">
+          📞 {{ msg.phone }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Tab -->
+    <div class="admin-content" *ngIf="activeTab === 'reviews'">
+      <div class="empty-state" *ngIf="reviews.length === 0">
+        <div class="empty-icon">⭐</div>
+        <h3>No reviews yet</h3>
+        <p>Customer reviews will appear here.</p>
+      </div>
+
+      <div class="admin-card" *ngFor="let rev of reviews">
+        <div class="admin-card-header">
+          <div>
+            <h4>{{ rev.name }} <span class="rating-badge">{{ '★'.repeat(rev.rating) }}</span></h4>
+            <span class="admin-meta">{{ rev.role }} · {{ formatDate(rev.created_at) }}</span>
+          </div>
+          <button class="btn-delete" (click)="deleteReview(rev.id!)">🗑️ Delete</button>
+        </div>
+        <p class="admin-card-body">{{ rev.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>

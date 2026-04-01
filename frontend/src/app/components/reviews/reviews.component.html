@@ -1,0 +1,70 @@
+<section class="reviews section" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Our Guests Say</h2>
+      <div class="decorative-divider"><span></span><i>⭐</i><span></span></div>
+      <p>Real words from people who've made The Haven a part of their daily ritual.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card" *ngFor="let r of reviews; let i = index">
+        <div class="quote-icon">"</div>
+        <div class="review-stars">
+          <span *ngFor="let s of getStars(r.rating)" class="star filled">★</span>
+          <span *ngFor="let s of getEmptyStars(r.rating)" class="star empty">★</span>
+        </div>
+        <p class="review-text">{{ r.text }}</p>
+        <div class="review-author">
+          <div class="review-avatar">{{ getInitials(r.name) }}</div>
+          <div class="review-author-info">
+            <h5>{{ r.name }}</h5>
+            <span>{{ r.role }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Write a Review Button -->
+    <div class="write-review-section">
+      <button class="btn btn-primary write-review-btn" (click)="toggleForm()">
+        {{ showForm ? '✕ Close' : '✍️ Write a Review' }}
+      </button>
+
+      <!-- Review Form -->
+      <div class="review-form-wrapper" *ngIf="showForm">
+        <div class="review-form-card" *ngIf="!submitted">
+          <h3>Share Your Experience</h3>
+          <div class="form-group">
+            <label for="review-name">Your Name</label>
+            <input type="text" id="review-name" [(ngModel)]="newReview.name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Your Rating</label>
+            <div class="star-selector">
+              <span *ngFor="let s of [1,2,3,4,5]"
+                    class="star-pick"
+                    [class.active]="s <= newReview.rating"
+                    (click)="setRating(s)">★</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="review-text">Your Review</label>
+            <textarea id="review-text" [(ngModel)]="newReview.text" placeholder="Tell us about your experience..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="review-role">How would you describe yourself?</label>
+            <input type="text" id="review-role" [(ngModel)]="newReview.role" placeholder="e.g., Coffee lover, Regular visitor" />
+          </div>
+          <button class="form-submit" (click)="submitReview()" [disabled]="submitting">
+            {{ submitting ? 'Submitting...' : '⭐ Submit Review' }}
+          </button>
+        </div>
+        <div class="review-success" *ngIf="submitted">
+          <div class="success-icon">✅</div>
+          <h3>Thank you for your review!</h3>
+          <p>Your feedback helps us brew even better experiences.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

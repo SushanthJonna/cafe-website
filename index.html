@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Brew Haven — Artisan Coffee & Cozy Café</title>
+  <meta name="description" content="The Brew Haven is a warm, artisan café serving handcrafted coffee, fresh pastries, and gourmet bites in a cozy, welcoming atmosphere." />
+  <meta name="keywords" content="café, coffee, artisan, cozy, pastries, brunch, espresso" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons (lightweight) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="cup">☕</div>
+      <h3>Brewing Something Special...</h3>
+    </div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">☕</div>
+        <h1>The Brew Haven</h1>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active" data-nav>Home</a></li>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#menu" data-nav>Menu</a></li>
+        <li><a href="#gallery" data-nav>Gallery</a></li>
+        <li><a href="#hours" data-nav>Hours</a></li>
+        <li><a href="#reviews" data-nav>Reviews</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero-banner.png" alt="Warm cozy café interior with ambient lighting" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Est. 2018 · Artisan Coffee</div>
+      <h2>
+        The Brew Haven
+        <span>Where Every Cup Tells a Story</span>
+      </h2>
+      <p>Escape the rush. Savor handcrafted coffee, freshly baked pastries, and the warmth of a place that feels like home.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">
+          <span>☕</span> Explore Menu
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          Our Story <span>→</span>
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <i data-lucide="chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <img src="images/about.png" alt="Beautifully crafted latte art on a wooden table" />
+          <div class="about-experience">
+            <div class="exp-number">8+</div>
+            <div class="exp-text">Years of<br/>Brewing Joy</div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <div class="section-header" style="text-align: left;">
+            <h2 style="display: block;">Our Story</h2>
+            <div class="decorative-divider" style="justify-content: flex-start; margin-left: 0;">
+              <span></span>
+              <i>☕</i>
+              <span></span>
+            </div>
+          </div>
+          <p>
+            Born from a love of great coffee and meaningful conversations, <strong>The Brew Haven</strong> opened its doors in 2018 in the heart of the city. What started as a small corner café with a single espresso machine has blossomed into a beloved gathering spot for coffee lovers, creatives, and dreamers.
+          </p>
+          <p>
+            We source our beans directly from sustainable farms across Colombia, Ethiopia, and Guatemala, roasting them in small batches to unlock their fullest flavor. Every cup is a journey — from the soil to your soul.
+          </p>
+          <p>
+            Beyond coffee, we take pride in our house-made pastries, artisan sandwiches, and a rotating seasonal menu that celebrates local ingredients.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <i data-lucide="bean"></i>
+              <span>Single-Origin Beans</span>
+            </div>
+            <div class="about-feature">
+              <i data-lucide="cake-slice"></i>
+              <span>House-Baked Pastries</span>
+            </div>
+            <div class="about-feature">
+              <i data-lucide="wifi"></i>
+              <span>Free High-Speed Wi-Fi</span>
+            </div>
+            <div class="about-feature">
+              <i data-lucide="leaf"></i>
+              <span>Eco-Friendly Practices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU SECTION ===== -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Menu</h2>
+        <div class="decorative-divider">
+          <span></span><i>☕</i><span></span>
+        </div>
+        <p>Crafted with passion, served with love. Explore our curated selection of coffees, bites, and sweet indulgences.</p>
+      </div>
+
+      <div class="menu-filters reveal">
+        <button class="menu-filter-btn active" data-filter="all">All</button>
+        <button class="menu-filter-btn" data-filter="coffee">Coffee</button>
+        <button class="menu-filter-btn" data-filter="tea">Tea</button>
+        <button class="menu-filter-btn" data-filter="snacks">Snacks</button>
+        <button class="menu-filter-btn" data-filter="desserts">Desserts</button>
+        <button class="menu-filter-btn" data-filter="brunch">Brunch</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Menu items populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Gallery</h2>
+        <div class="decorative-divider">
+          <span></span><i>📷</i><span></span>
+        </div>
+        <p>A glimpse into the warmth, flavors, and moments that make The Brew Haven special.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img src="images/hero-banner.png" alt="Cozy café interior with warm lighting" />
+          <div class="gallery-item-overlay"><span>Our Cozy Interior</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-coffee.png" alt="Artisan cappuccino with latte art" />
+          <div class="gallery-item-overlay"><span>Artisan Coffee</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/about.png" alt="Latte art and pastry on table" />
+          <div class="gallery-item-overlay"><span>Morning Vibes</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-dessert.png" alt="Chocolate lava cake with ice cream" />
+          <div class="gallery-item-overlay"><span>Sweet Temptations</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/exterior.png" alt="Café exterior at golden hour" />
+          <div class="gallery-item-overlay"><span>Welcome In</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPENING HOURS SECTION ===== -->
+  <section class="hours section" id="hours">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Opening Hours</h2>
+        <div class="decorative-divider">
+          <span></span><i>🕐</i><span></span>
+        </div>
+        <p>We're here to fuel your mornings and sweeten your evenings.</p>
+      </div>
+
+      <div class="hours-content">
+        <div class="hours-card reveal-left">
+          <h3><i data-lucide="clock"></i> Weekly Schedule</h3>
+          <div class="hours-list" id="hoursList">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="hours-info reveal-right">
+          <div class="hours-info-card">
+            <i data-lucide="sunrise"></i>
+            <div>
+              <h4>Early Bird Special</h4>
+              <p>Visit us before 9 AM and enjoy 15% off on all breakfast items. Start your day right!</p>
+            </div>
+          </div>
+          <div class="hours-info-card">
+            <i data-lucide="calendar-heart"></i>
+            <div>
+              <h4>Weekend Brunch</h4>
+              <p>Our weekend brunch menu features special items like Eggs Benedict, Belgian Waffles, and bottomless mimosas.</p>
+            </div>
+          </div>
+          <div class="hours-info-card">
+            <i data-lucide="music"></i>
+            <div>
+              <h4>Live Music Fridays</h4>
+              <p>Enjoy live acoustic performances every Friday evening from 7 PM – 9 PM. The perfect weekend start!</p>
+            </div>
+          </div>
+          <div class="hours-info-card">
+            <i data-lucide="gift"></i>
+            <div>
+              <h4>Private Events</h4>
+              <p>We host birthday parties, book clubs, and corporate meetups. Contact us to reserve our cozy loft space.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATION SECTION ===== -->
+  <section class="location section" id="location">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Find Us</h2>
+        <div class="decorative-divider">
+          <span></span><i>📍</i><span></span>
+        </div>
+        <p>Nestled on a charming street, The Brew Haven is easy to find and even easier to love.</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-map reveal-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.599340916493!2d77.5945627!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="The Brew Haven location on Google Maps">
+          </iframe>
+        </div>
+        <div class="location-details reveal-right">
+          <div class="location-card">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <h4>Our Address</h4>
+              <p>42 Lavender Lane, Indiranagar<br/>Bengaluru, Karnataka 560038</p>
+            </div>
+          </div>
+          <div class="location-card">
+            <i data-lucide="car"></i>
+            <div>
+              <h4>Parking</h4>
+              <p>Complimentary parking available in our private lot behind the building. Street parking also available.</p>
+            </div>
+          </div>
+          <div class="location-card">
+            <i data-lucide="train-front"></i>
+            <div>
+              <h4>Public Transport</h4>
+              <p>5-minute walk from Indiranagar Metro Station. Bus stop 'Lavender Junction' is right outside.</p>
+            </div>
+          </div>
+          <div class="location-card">
+            <i data-lucide="accessibility"></i>
+            <div>
+              <h4>Accessibility</h4>
+              <p>Our café is fully wheelchair accessible with ramp entry and accessible restrooms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS SECTION ===== -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What Our Guests Say</h2>
+        <div class="decorative-divider">
+          <span></span><i>⭐</i><span></span>
+        </div>
+        <p>Real words from people who've made The Brew Haven a part of their daily ritual.</p>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Get in Touch</h2>
+        <div class="decorative-divider">
+          <span></span><i>✉️</i><span></span>
+        </div>
+        <p>Have a question, a suggestion, or just want to say hi? We'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-form reveal-left">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="+91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Your Message</label>
+              <textarea id="contact-message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">
+              <i data-lucide="send"></i>
+              Send Message
+            </button>
+            <div class="form-message" id="formMessage">
+              ✅ Thank you! Your message has been sent. We'll get back to you shortly.
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info reveal-right">
+          <div class="contact-info-card">
+            <i data-lucide="phone"></i>
+            <div>
+              <h4>Call Us</h4>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <i data-lucide="mail"></i>
+            <div>
+              <h4>Email Us</h4>
+              <a href="mailto:hello@thebrewhaven.com">hello@thebrewhaven.com</a>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <h4>Visit Us</h4>
+              <p>42 Lavender Lane, Indiranagar<br/>Bengaluru, KA 560038</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <i data-lucide="clock"></i>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Mon-Fri: 7 AM – 10 PM<br/>Sat-Sun: 8 AM – 11 PM</p>
+            </div>
+          </div>
+
+          <div style="padding: 0 var(--sp-md);">
+            <h4 style="font-family: var(--ff-heading); color: var(--clr-espresso); margin-bottom: var(--sp-sm);">Follow Us</h4>
+            <div class="social-links">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <i data-lucide="facebook"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                <i data-lucide="twitter"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <i data-lucide="youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☕ The Brew Haven</h3>
+          <p>A cozy corner of the world where great coffee meets great company. We believe in good beans, great people, and the magic that happens when they come together.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <i data-lucide="twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Menu Picks</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Espresso</a></li>
+            <li><a href="#menu">Caramel Latte</a></li>
+            <li><a href="#menu">Avocado Toast</a></li>
+            <li><a href="#menu">Tiramisu</a></li>
+            <li><a href="#menu">Matcha Latte</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+919876543210"><i data-lucide="phone" style="width:14px;height:14px;"></i> +91 98765 43210</a></li>
+            <li><a href="mailto:hello@thebrewhaven.com"><i data-lucide="mail" style="width:14px;height:14px;"></i> hello@thebrewhaven.com</a></li>
+            <li><a href="#location"><i data-lucide="map-pin" style="width:14px;height:14px;"></i> 42 Lavender Lane, Bengaluru</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Brew Haven. All rights reserved. Brewed with ❤️</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
