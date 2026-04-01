@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://cafe-backend.onrender.com/api'
+  apiUrl: 'https://cafe-website-fpn4.onrender.com/api'
 };
